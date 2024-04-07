@@ -9,8 +9,8 @@ const parseEnvVariables = (filepath) => {
     },
     {},
   );
-  envVars.VITE_PKG_NAME = JSON.stringify(pkg.name);
-  envVars.VITE_PKG_VERSION = JSON.stringify(pkg.version);
+  envVars.VITE_PKG_NAME = '"@excalidraw/excalidraw"';
+  envVars.VITE_PKG_VERSION = '"0.17.3"';
   envVars.VITE_IS_EXCALIDRAW_NPM_PACKAGE = JSON.stringify(true);
   return envVars;
 };
