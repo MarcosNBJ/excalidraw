@@ -240,8 +240,8 @@ export const ShapesSwitcher = ({
         if (
           UIOptions.tools?.[
             value as Extract<typeof value, keyof AppProps["UIOptions"]["tools"]>
-          ] === false
-          || (!toolBarExpanded && value != 'freedraw')
+          ] === false ||
+          (!toolBarExpanded && value != "freedraw")
         ) {
           return null;
         }
@@ -345,18 +345,18 @@ export const ShapesSwitcher = ({
         </DropdownMenu.Content>
       </DropdownMenu>
       <label className={clsx("ToolIcon")}>
-      <input
-        className={`ToolIcon_type_radio`}
-        type="radio"
-        onClick={() => {
-          setToolbarExpanded((prev) => !prev)}
-        }
-        checked={toolBarExpanded}
-      />
-      <div className="ToolIcon__icon">
-        {toolBarExpanded ? ZoomOutIcon : PlusIcon }
-      </div>
-    </label>
+        <input
+          className={`ToolIcon_type_radio`}
+          type="radio"
+          onClick={() => {
+            setToolbarExpanded((prev) => !prev);
+          }}
+          checked={toolBarExpanded}
+        />
+        <div className="ToolIcon__icon">
+          {toolBarExpanded ? ZoomOutIcon : PlusIcon}
+        </div>
+      </label>
     </>
   );
 };
