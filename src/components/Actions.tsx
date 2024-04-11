@@ -36,6 +36,8 @@ import {
   frameToolIcon,
   mermaidLogoIcon,
   laserPointerToolIcon,
+  PlusIcon,
+  ZoomOutIcon,
 } from "./icons";
 import { KEYS } from "../keys";
 
@@ -226,6 +228,7 @@ export const ShapesSwitcher = ({
   UIOptions: AppProps["UIOptions"];
 }) => {
   const [isExtraToolsMenuOpen, setIsExtraToolsMenuOpen] = useState(false);
+  const [toolBarExpanded, setToolbarExpanded] = useState(false);
 
   const frameToolSelected = activeTool.type === "frame";
   const laserToolSelected = activeTool.type === "laser";
@@ -238,6 +241,7 @@ export const ShapesSwitcher = ({
           UIOptions.tools?.[
             value as Extract<typeof value, keyof AppProps["UIOptions"]["tools"]>
           ] === false
+          || (!toolBarExpanded && value != 'freedraw')
         ) {
           return null;
         }
@@ -340,6 +344,19 @@ export const ShapesSwitcher = ({
           </DropdownMenu.Item>
         </DropdownMenu.Content>
       </DropdownMenu>
+      <label className={clsx("ToolIcon")}>
+      <input
+        className={`ToolIcon_type_radio`}
+        type="radio"
+        onClick={() => {
+          setToolbarExpanded((prev) => !prev)}
+        }
+        checked={toolBarExpanded}
+      />
+      <div className="ToolIcon__icon">
+        {toolBarExpanded ? ZoomOutIcon : PlusIcon }
+      </div>
+    </label>
     </>
   );
 };
