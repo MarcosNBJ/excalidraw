@@ -106,6 +106,67 @@ export const PlusIcon = createIcon(
   tablerIconProps,
 );
 
+export const MathAxisIcon = createIcon(
+  <>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 273.66014462425676 273.6601446242569"
+    >
+      <g strokeLinecap="round">
+        {/* Horizontal Axis */}
+        <g transform="translate(10 136.83835260615126)">
+          <path
+            d="M0 0 C60.49 0, 120.99 0, 253.66 0 M0 0 C90.89 0, 181.77 0, 253.66 0"
+            stroke="#000000"
+            strokeWidth="4"
+            fill="none"
+          />
+        </g>
+        {/* Arrow for Horizontal Axis */}
+        <g transform="translate(10 136.83835260615126)">
+          <path
+            d="M225.47 10.26 C232.19 7.81, 238.92 5.37, 253.66 0 M225.47 10.26 C235.57 6.58, 245.67 2.91, 253.66 0"
+            stroke="#000000"
+            strokeWidth="4"
+            fill="none"
+          />
+          <path
+            d="M225.47 -10.26 C232.19 -7.81, 238.92 -5.37, 253.66 0 M225.47 -10.26 C235.57 -6.58, 245.67 -2.91, 253.66 0"
+            stroke="#000000"
+            strokeWidth="4"
+            fill="none"
+          />
+        </g>
+        {/* Vertical Axis */}
+        <g transform="translate(9.480459691345573 136.83007231212844) rotate(270 126.83007231212844 0)">
+          <path
+            d="M0 0 C67.89 0, 135.79 0, 253.66 0 M0 0 C52.85 0, 105.7 0, 253.66 0"
+            stroke="#000000"
+            strokeWidth="4"
+            fill="none"
+          />
+        </g>
+        {/* Arrow for Vertical Axis */}
+        <g transform="translate(9.480459691345573 136.83007231212844) rotate(270 126.83007231212844 0)">
+          <path
+            d="M225.47 10.26 C233.01 7.51, 240.56 4.77, 253.66 0 M225.47 10.26 C231.34 8.12, 237.22 5.99, 253.66 0"
+            stroke="#000000"
+            strokeWidth="4"
+            fill="none"
+          />
+          <path
+            d="M225.47 -10.26 C233.01 -7.51, 240.56 -4.77, 253.66 0 M225.47 -10.26 C231.34 -8.12, 237.22 -5.99, 253.66 0"
+            stroke="#000000"
+            strokeWidth="4"
+            fill="none"
+          />
+        </g>
+      </g>
+    </svg>
+  </>,
+  tablerIconProps,
+);
+
 // tabler-icons: dots-vertical
 export const DotsIcon = createIcon(
   <g strokeWidth="1.5">
