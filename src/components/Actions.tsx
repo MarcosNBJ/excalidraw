@@ -13,7 +13,13 @@ import {
   hasStrokeWidth,
 } from "../scene";
 import { SHAPES } from "../shapes";
-import { AppClassProperties, AppProps, LibraryItems, UIAppState, Zoom } from "../types";
+import {
+  AppClassProperties,
+  AppProps,
+  LibraryItems,
+  UIAppState,
+  Zoom,
+} from "../types";
 import { capitalizeString, isTransparent } from "../utils";
 import Stack from "./Stack";
 import { ToolButton } from "./ToolButton";
@@ -315,7 +321,7 @@ export const ShapesSwitcher = ({
       created: 1649734896509,
       name: "Four Quadrants",
     },
-  ] as unknown as LibraryItems
+  ] as unknown as LibraryItems;
 
   return (
     <>
@@ -324,7 +330,7 @@ export const ShapesSwitcher = ({
           UIOptions.tools?.[
             value as Extract<typeof value, keyof AppProps["UIOptions"]["tools"]>
           ] === false ||
-          (!toolBarExpanded && value !== "freedraw")
+          (!toolBarExpanded && !["freedraw", "eraser"].includes(value))
         ) {
           return null;
         }
